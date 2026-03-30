@@ -1,62 +1,65 @@
-<!DOCTYPE html>
-<html lang="ro">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asigurări Ieftine Online | Compară RCA și Locuință</title>
-    <meta name="description" content="Compară cele mai bune oferte de asigurări RCA, Casco și Locuință. Emitere rapidă și 100% online.">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <nav>
-        <div class="container">
-            <div class="logo">Asigură<strong>Gratis</strong></div>
-            <div class="badge">100% Online</div>
-        </div>
-    </nav>
-
-    <header>
-        <div class="container">
-            <h1>Economisește la asigurarea ta</h1>
-            <p>Alege tipul de asigurare și compară ofertele în timp real.</p>
-            
-            <div class="hero-card">
-                <label for="insurance-type">Ce vrei să asiguri astăzi?</label>
-                <select id="insurance-type">
-                    <option value="rca">🚗 Auto (RCA / Casco)</option>
-                    <option value="pad">🏠 Locuință (PAD / Facultativă)</option>
-                    <option value="travel">✈️ Călătorie (Medicală)</option>
-                </select>
-                <button id="cta-button" onclick="redirectAffiliate()">Vezi Prețuri și Compară</button>
+<header class="hero">
+        <div class="container hero-layout">
+            <div class="hero-text">
+                <h1>Asigurări Online Ieftine și Rapide</h1>
+                <p>Compară prețurile de la peste 10 asiguratori și alege cea mai bună ofertă pentru tine, direct de acasă.</p>
+                <a href="https://google.com?q=asigurare+RCA" target="_blank" class="btn btn-secondary btn-lg">Calculează Preț RCA</a>
             </div>
-            <p class="trust-note">🛡️ Serviciu securizat prin parteneri autorizați ASF</p>
+            <div class="hero-image">
+                <img src="familie.jpg" alt="Familie protejată cu asigurare">
+            </div>
         </div>
     </header>
 
-    <section class="benefits">
-        <div class="container grid">
-            <div class="benefit-item">
-                <h3>Fără Comisioane</h3>
-                <p>Plătești exact prețul asigurătorului, fără taxe ascunse.</p>
-            </div>
-            <div class="benefit-item">
-                <h3>Emitere Instant</h3>
-                <p>Primești polița pe e-mail imediat după plată.</p>
-            </div>
-            <div class="benefit-item">
-                <h3>Toți Asigurătorii</h3>
-                <p>Comparam peste 10 companii de top din România.</p>
-            </div>
-        </div>
-    </section>
+    ```
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 AsigurăGratis - Proiect de Afiliere</p>
-        </div>
-    </footer>
+### Pasul 4: Adaugă stilul pentru poză (Editează style.css)
 
-    <script src="script.js"></script>
-</body>
-</html>
+Ca să facem textul și poza să stea unul lângă altul, trebuie să adăugăm puțin cod CSS.
+
+1.  Dă click pe `style.css` și apasă pe creion pentru editare.
+2.  Adaugă acest cod la finalul fișierului:
+
+```css
+/* Stil pentru aspectul pe două coloane în Hero */
+.hero-layout {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 20px;
+}
+
+.hero-text {
+    flex: 1; /* Ocupă o parte din spațiu */
+    text-align: left;
+}
+
+.hero .btn-lg {
+    margin: 20px 0; /* Scoatem centrarea anterioară */
+}
+
+.hero-image {
+    flex: 1; /* Ocupă cealaltă parte */
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Margini rotunjite */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Efect de umbră modern */
+}
+
+/* Modificare pentru mobil - să pună poza sub text */
+@media (max-width: 768px) {
+    .hero-layout {
+        flex-direction: column-reverse; /* Poza jos, textul sus */
+        text-align: center;
+        gap: 20px;
+        padding: 40px 20px;
+    }
+    .hero-text {
+        text-align: center;
+    }
+}
