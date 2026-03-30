@@ -1,65 +1,67 @@
-<header class="hero">
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Asigurări - Protecție la un click distanță</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-content">
+            <div class="logo">Expert<span>Asigurări</span></div>
+            <div class="nav-links">
+                <a href="#">Acasă</a>
+                <a href="#servicii">Servicii</a>
+                <a href="#contact" class="btn btn-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
         <div class="container hero-layout">
             <div class="hero-text">
-                <h1>Asigurări Online Ieftine și Rapide</h1>
-                <p>Compară prețurile de la peste 10 asiguratori și alege cea mai bună ofertă pentru tine, direct de acasă.</p>
-                <a href="https://google.com?q=asigurare+RCA" target="_blank" class="btn btn-secondary btn-lg">Calculează Preț RCA</a>
+                <h1>Asigurări Online <br><span>Ieftine și Rapide</span></h1>
+                <p>Compară ofertele de la cei mai mari asigurători din România. Primești polița pe e-mail în mai puțin de 5 minute.</p>
+                <div class="hero-cta">
+                    <a href="https://google.com?q=asigurare+RCA" target="_blank" class="btn btn-secondary btn-lg">Calculează Preț RCA</a>
+                </div>
+                <div class="hero-badges">
+                    <span>✓ 100% Sigur</span>
+                    <span>✓ Emitere Imediată</span>
+                </div>
             </div>
             <div class="hero-image">
-                <img src="familie.jpg" alt="Familie protejată cu asigurare">
+                <img src="familie.jpg" alt="Familie fericită și protejată">
             </div>
         </div>
     </header>
 
-    ```
+    <main id="servicii" class="container">
+        <h2 class="section-title">Ce tip de asigurare cauți?</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Asigurare RCA</h3>
+                <p>Cel mai mic preț garantat pentru mașina ta. Verificăm toți asigurătorii într-un singur loc.</p>
+                <a href="https://google.com?q=RCA+online" class="btn-link">Află prețul →</a>
+            </div>
+            <div class="card">
+                <h3>Asigurare Locuință</h3>
+                <p>Protejează-ți căminul împotriva incendiilor, inundațiilor sau cutremurelor. PAD și facultativă.</p>
+                <a href="https://google.com?q=asigurare+locuinta" class="btn-link">Vezi detalii →</a>
+            </div>
+            <div class="card">
+                <h3>Asigurare Călătorie</h3>
+                <p>Pleacă fără griji în vacanță. Acoperire medicală completă oriunde în lume.</p>
+                <a href="https://google.com?q=asigurare+calatorie" class="btn-link">Cumpără acum →</a>
+            </div>
+        </div>
+    </main>
 
-### Pasul 4: Adaugă stilul pentru poză (Editează style.css)
+    <footer>
+        <p>&copy; 2024 Expert Asigurări. Toate drepturile rezervate.</p>
+    </footer>
 
-Ca să facem textul și poza să stea unul lângă altul, trebuie să adăugăm puțin cod CSS.
-
-1.  Dă click pe `style.css` și apasă pe creion pentru editare.
-2.  Adaugă acest cod la finalul fișierului:
-
-```css
-/* Stil pentru aspectul pe două coloane în Hero */
-.hero-layout {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    padding: 60px 20px;
-}
-
-.hero-text {
-    flex: 1; /* Ocupă o parte din spațiu */
-    text-align: left;
-}
-
-.hero .btn-lg {
-    margin: 20px 0; /* Scoatem centrarea anterioară */
-}
-
-.hero-image {
-    flex: 1; /* Ocupă cealaltă parte */
-    display: flex;
-    justify-content: center;
-}
-
-.hero-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px; /* Margini rotunjite */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Efect de umbră modern */
-}
-
-/* Modificare pentru mobil - să pună poza sub text */
-@media (max-width: 768px) {
-    .hero-layout {
-        flex-direction: column-reverse; /* Poza jos, textul sus */
-        text-align: center;
-        gap: 20px;
-        padding: 40px 20px;
-    }
-    .hero-text {
-        text-align: center;
-    }
-}
+</body>
+</html>
